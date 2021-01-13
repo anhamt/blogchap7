@@ -1,16 +1,8 @@
-{
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "mongoose": "^5.6.9"
-  }
-}
+const express = require('express');
+const app = express();
+
+app.get('/api/user/login', (req, res) => {
+   res.send('Hello World!')
+});
+
+app.listen(3000, () => console.log('Listening on port 3000'));
